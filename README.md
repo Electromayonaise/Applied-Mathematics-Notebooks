@@ -16,6 +16,6 @@
 <!--h2 without bottom border-->
 <div id="user-content-toc">
   <ul align="center">
-        <body><h3 style="display: inline-block">Before making any use of any notebook on this reposiroty, please read the license it is under</h3></body>
+        <body><h3 style="display: inline-block">Before making any use of any notebook on this repository, please read the license it is under</h3></body>
   </ul>
 </div>
