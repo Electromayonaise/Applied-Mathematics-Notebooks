@@ -1,0 +1,197 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Electromayonaise/Calculus-Notebooks/blob/main/Copy%20of%20Lagrange%20Notebook\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "<img src=http://www.acofi.edu.co/eiei2016/wp-content/uploads/2016/09/Logo-Universidad-ICESI.jpg width=\"500\" height=\"200\" align=\"center\">\n",
+        "\n",
+        "#**<big><big>Matemáticas Aplicadas II</big></big><br><small>Depto. Ciencias Fisicas y aplicadas / Facultad de Ingeniería</small><br><small> </small>**\n",
+        "\n",
+        "**<u>Conceptos</u>**\n",
+        "*Máximos y Mínimo,*\n",
+        "*Lagrange*\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "Drr9IrGGikgn"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Extremos de funciones de varias variables sobre conjuntos de nivel"
+      ],
+      "metadata": {
+        "id": "RA0Pnn_Ci6pG"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ahora vamos a dar un resultado que permite identificar candidatos a extremos de una función $f$ en un conjunto de nivel. Enunciamos el teorema para funciones de $\\mathbb{R}^2$ a $\\mathbb{R}$ pero un resultado análogo es cierto en cualquier otra dimensión.\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "mS-zDXcxjRlP"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Multiplicador de Lagrange"
+      ],
+      "metadata": {
+        "id": "CP1PxfkTkbPF"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Sean $f$ y $g$ funciones $C^1$ de un conjunto abierto en $\\mathbb{R}^2$ a $\\mathbb{R}$, y enotamos por $S$ un conjunto de nivel $g(x, y) = c$. Sea $P$ un punto de $S$ tal que\n",
+        "\n",
+        "* $∇g(P) \\not=  0$, y\n",
+        "\n",
+        "* $f$ tiene un extremo local en $S$ en $P$. Entonces existe un número $λ$ tal que\n",
+        "\n",
+        "$$∇f (P) = λ∇g(P).$$"
+      ],
+      "metadata": {
+        "id": "r2opDqptkdkq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "l5OEV3OPh9zS",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 521
+        },
+        "outputId": "2cf517bf-f7cb-460d-f5e9-dc40b2b69610"
+      },
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/html": [
+              "\n",
+              "        <iframe\n",
+              "            width=\"1020px\"\n",
+              "            height=\"480px\"\n",
+              "            src=\"https://www.geogebra.org/m/ycaxhrq6\"\n",
+              "            frameborder=\"0\"\n",
+              "            allowfullscreen\n",
+              "            \n",
+              "        ></iframe>\n",
+              "        "
+            ]
+          },
+          "metadata": {}
+        }
+      ],
+      "source": [
+        "#@title  { display-mode: \"form\" }\n",
+        "\n",
+        "import IPython.display as IP\n",
+        "\n",
+        "iframe = IP.IFrame(\n",
+        "  src=\"https://www.geogebra.org/m/ycaxhrq6\",\n",
+        "  width=\"1020px\",\n",
+        "  height=\"480px\"\n",
+        "  )\n",
+        "\n",
+        "IP.display_html(iframe)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title  { display-mode: \"form\" }\n",
+        "\n",
+        "import IPython.display as IP\n",
+        "\n",
+        "iframe = IP.IFrame(\n",
+        "  src=\"https://www.geogebra.org/m/ztrdhtzk\",\n",
+        "  width=\"1020px\",\n",
+        "  height=\"480px\"\n",
+        "  )\n",
+        "\n",
+        "IP.display_html(iframe)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 521
+        },
+        "id": "fdKEp2fjHkTt",
+        "outputId": "ef36ed56-d89e-4029-8a91-033ad4ff7360"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/html": [
+              "\n",
+              "        <iframe\n",
+              "            width=\"1020px\"\n",
+              "            height=\"480px\"\n",
+              "            src=\"https://www.geogebra.org/m/ztrdhtzk\"\n",
+              "            frameborder=\"0\"\n",
+              "            allowfullscreen\n",
+              "            \n",
+              "        ></iframe>\n",
+              "        "
+            ]
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Optimización numérica"
+      ],
+      "metadata": {
+        "id": "6vztZjOiS2J6"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "[link text](https://relopezbriega.github.io/blog/2017/01/18/problemas-de-optimizacion-con-python/)"
+      ],
+      "metadata": {
+        "id": "94SAjfeBS86b"
+      }
+    }
+  ]
+}
